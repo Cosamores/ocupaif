@@ -3,7 +3,10 @@ import React from 'react';
 import styles from '../styles/CartaAberta.module.css';
 
 const CartaAberta = ({ titulo, subtitulo, conteudo }) => {
-    const conteudoFormatado = conteudo.replace(/Ocupar/g, '<br/><strong>Ocupar</strong>');
+    const conteudoFormatado = conteudo.replace(
+        /Ocupar/g,
+        '<br/><strong style="color: #ff5722;">Ocupar</strong>'
+      );
 
   return (
     <section className={styles.cartaAberta}>
