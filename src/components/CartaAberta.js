@@ -3,11 +3,13 @@ import React from 'react';
 import styles from '../styles/CartaAberta.module.css';
 
 const CartaAberta = ({ titulo, subtitulo, conteudo }) => {
+    const conteudoFormatado = conteudo.replace(/Ocupar/g, '<br/><strong>Ocupar</strong>');
+
   return (
     <section className={styles.cartaAberta}>
       <h2 className={styles.titulo}>{titulo}</h2>
       <h3 className={styles.subtitulo}>{subtitulo}</h3>
-      <p className={styles.conteudo}>{conteudo}</p>
+      <p className={styles.conteudo} dangerouslySetInnerHTML={{ __html: conteudoFormatado }}></p>
     </section>
   );
 };
