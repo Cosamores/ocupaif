@@ -8,7 +8,6 @@ const Footer = (props) => {
 const submitHandler = () => {
     const button = document.querySelector('submitButton');
     button.preventDefault();
-
     alert('Versão de teste');
 
 }
