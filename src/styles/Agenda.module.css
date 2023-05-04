@@ -6,10 +6,10 @@
   }
   
   .titulo {
-    font-size: 22px;
-    text-align: center;
-    padding: 10px;
+    font-size: 28px;
+    text-align: left;
     font-weight: 600;
+    padding: 0 0 1em 3em;
   }
 
   .eventoCard {
@@ -60,5 +60,9 @@
     max-height: 50%;
     }
     .titulo {
+        text-align: center;
+        font-size: 22px;
+        padding: 10px;
+
     }
   }

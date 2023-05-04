@@ -11,15 +11,15 @@ const Header = () => {
         <h1 className={styles.title}>Ocupa IFSP</h1>
       </div>
       <nav>
-        <ul className={styles.menu}>
+         <ul className={styles.menu}>
           <li>
-            <Link href="/">
-              <a className={styles.menuItem}>Home</a>
+            <Link href="/" className={styles.menuItem}>
+              Home
             </Link>
           </li>
           <li>
-            <Link href="/Audiovisual">
-              <a className={styles.menuItem}>Formação</a>
+            <Link href="/Audiovisual" className={styles.menuItem}>
+              Formação
             </Link>
           </li>
         </ul>

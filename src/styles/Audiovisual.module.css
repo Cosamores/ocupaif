@@ -4,8 +4,15 @@
     align-items: center;
     min-height: 100vh;
     background-color: #121212;
+    
   }
   
+  .card {
+    max-width: 90%;
+    border: 2px solid #d6d6d6
+
+  }
+
   .title {
     font-size: 2rem;
     color: #8dfbfb;
@@ -13,11 +20,14 @@
     text-shadow: 0 0 2px #8dfbfb, 0 0 10px #8dfbfb, 0 0 20px #8dfbfb, 0 0 30px #8dfbfb;
     letter-spacing: 2px;
     margin-bottom: 1rem;
+    padding: 2% ;
   }
   
   .text {
     font-size: 1.2rem;
     color: #d6d6d6;
     line-height: 1.5;
+    padding: 2% ;
+
   }
   
