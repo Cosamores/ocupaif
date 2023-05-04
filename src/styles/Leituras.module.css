@@ -1,0 +1,33 @@
+/* styles/Leituras.module.css */
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    --webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .h2 {
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  
+  .linkList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .linkList li {
+    margin-bottom: 10px;
+  }
+  
+  .linkList a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .linkList a:hover {
+    color: #00ccff;
+  }
+  

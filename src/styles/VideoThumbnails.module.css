@@ -1,0 +1,20 @@
+/* VideoThumbnails.module.css */
+.videoThumbnails {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 16px;
+  }
+  
+  .thumbnail {
+    background-size: cover;
+    background-position: center;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    cursor: pointer;
+  }
+
+  .title {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    }
+  

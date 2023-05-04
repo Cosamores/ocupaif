@@ -1,33 +1,43 @@
 .container {
-    display: flex;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin: 5%;
+  flex-direction: row;
+  margin-top: 15%;
+  align-items: center;
+}
+
+.cardLeituras {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --webkit-backdrop-filter: blur(10px);
+  margin-bottom: 20px;
+  transition: 0.2s ease;
+  width: 30%;
+}
+
+.cardVideos {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --webkit-backdrop-filter: blur(10px);
+  margin-bottom: 20px;
+  transition: 0.2s ease;
+  width: 70%;
+}
+
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #121212;
-    
   }
-  
-  .card {
-    max-width: 90%;
-    border: 2px solid #d6d6d6
-
-  }
-
-  .title {
-    font-size: 2rem;
-    color: #8dfbfb;
-    text-transform: uppercase;
-    text-shadow: 0 0 2px #8dfbfb, 0 0 10px #8dfbfb, 0 0 20px #8dfbfb, 0 0 30px #8dfbfb;
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
-    padding: 2% ;
-  }
-  
-  .text {
-    font-size: 1.2rem;
-    color: #d6d6d6;
-    line-height: 1.5;
-    padding: 2% ;
-
-  }
-  
+}
