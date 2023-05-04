@@ -7,22 +7,22 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logoContainer}>
-      <img className={styles.logo} src="/images/logo.png" alt="Logo Ocupa IFSP" />
-      <h1 className={styles.title}>Ocupa IFSP</h1>
+        <img className={styles.logo} src="/images/logo.png" alt="Logo Ocupa IFSP" />
+        <h1 className={styles.title}>Ocupa IFSP</h1>
       </div>
       <nav>
-{/*         <ul className={styles.menu}>
+        <ul className={styles.menu}>
           <li>
-            <Link href="/" className={styles.menuItem}>
-              Home
+            <Link href="/">
+              <a className={styles.menuItem}>Home</a>
             </Link>
           </li>
           <li>
-            <Link href="/audiovisual" className={styles.menuItem}>
-              Formação
+            <Link href="/Audiovisual">
+              <a className={styles.menuItem}>Formação</a>
             </Link>
           </li>
-        </ul> */}
+        </ul>
       </nav>
     </header>
   );
