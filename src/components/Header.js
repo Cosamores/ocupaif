@@ -11,7 +11,7 @@ const Header = () => {
       <h1 className={styles.title}>Ocupa IFSP</h1>
       </div>
       <nav>
-        <ul className={styles.menu}>
+{/*         <ul className={styles.menu}>
           <li>
             <Link href="/" className={styles.menuItem}>
               Home
@@ -22,12 +22,7 @@ const Header = () => {
               Formação
             </Link>
           </li>
-{/*           <li>
-            <Link href="/contact" className={styles.menuItem}>
-              Contact
-            </Link>
-          </li> */}
-        </ul>
+        </ul> */}
       </nav>
     </header>
   );

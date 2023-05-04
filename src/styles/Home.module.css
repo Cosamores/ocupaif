@@ -1,0 +1,44 @@
+/* src/styles/Home.module.css */
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+    align-items: flex-start;
+    margin-top: 7%;
+    max-width: 1920px;
+  }
+  
+  .leftContainer {
+    flex: 0 0 70%;
+    max-width: 70%;
+  }
+  
+  .rightContainer {
+    flex: 0 0 30%;
+    max-width: 30%;
+    overflow-y: auto;
+  }
+  
+  /* Adicione a media query */
+  @media (max-width: 768px) {
+    .main {
+      flex-direction:column-reverse;
+      align-items: center;
+      height: auto;
+    }
+  
+    .leftContainer,
+    .rightContainer {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  
+    .rightContainer {
+      margin-bottom: 1rem;
+      margin-top: 7%;
+    }
+  }
+  

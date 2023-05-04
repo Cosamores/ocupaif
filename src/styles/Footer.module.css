@@ -47,7 +47,8 @@
     background-color: #cbcbcb3a;
     width: 130px;
   }
-  .submitButton{}
+  .submitButton:hover{
+  }
 
   .callToAction {
     font-weight: bold;
@@ -56,6 +57,11 @@
   }
   
   @media (max-width: 768px) {
+    .footer {
+        padding: 2% 2% 10% 2%;
+        border-top: 1px solid #9696969f;
+    }
+
     .callToAction {
         font-size: 18px;
     }

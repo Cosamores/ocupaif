@@ -6,12 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export",
+    "postinstall": "next build && next export"
   },
   "dependencies": {
     "@emotion/react": "^11.10.8",
+    "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.8",
     "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.12.3",
     "autoprefixer": "10.4.14",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.4",
