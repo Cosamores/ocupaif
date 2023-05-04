@@ -4,6 +4,9 @@ import styles from '../styles/CartaAberta.module.css';
 
 const CartaAberta = ({ titulo, subtitulo, conteudo }) => {
     const conteudoFormatado = conteudo.replace(
+        /TODOS/g,
+        'TODOS<br/>'
+      ).replace(
         /Ocupar/g,
         '<br/><strong style="color: #ff5722;">Ocupar</strong>'
       );
