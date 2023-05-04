@@ -9,7 +9,7 @@ import styles from '../styles/Audiovisual.module.css';
         <div className='styles.card'>
         <h1 className={styles.title}>Página em construção</h1>
         <p className={styles.text}>
-          Estamos trabalhando duro para trazer a página de audiovisual em breve. Fique ligado!
+          Estamos trabalhando duro para trazer a página de formações em breve. Fique ligado!
         </p>
         </div>
       </Card>
