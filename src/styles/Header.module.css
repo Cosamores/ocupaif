@@ -23,13 +23,15 @@
   .logo {
     height: 40px;
     width: auto;
-    margin-right: 10px;
+    margin-right: 12px;
   }
   
   .title {
     font-size: 24px;
-    color: rgba(255, 255, 255, 0.9);
+    color: #ff5722;
     margin: 0;
+    font-weight: 700;
+    padding: 0;
   }
   
   .menu {

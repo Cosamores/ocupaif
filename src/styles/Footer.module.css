@@ -29,9 +29,10 @@
   
   .footer h3 {
     font-size: 26px;
+    padding: 10px;
   }
-  .newsletter {
-    margin: 0.0em 0;
+  .newsletter h3 {
+    color: rgb(129, 221, 129)
   }
 
   .newsletter input {
@@ -48,12 +49,16 @@
     width: 130px;
   }
   .submitButton:hover{
+    background-color: aliceblue;
+    color: #000000;
   }
 
   .callToAction {
     font-weight: bold;
     font-size: 1.5rem;
     padding-bottom: 10px;
+    color: #ff5722;
+    padding-top: 10px;
   }
   
   @media (max-width: 768px) {

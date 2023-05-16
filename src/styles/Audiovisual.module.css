@@ -4,8 +4,9 @@
   flex-wrap: nowrap;
   margin: 5%;
   flex-direction: row;
-  margin-top: 15%;
   align-items: center;
+  max-height: 100%;
+
 }
 
 .cardLeituras {

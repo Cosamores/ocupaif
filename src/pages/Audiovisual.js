@@ -85,9 +85,9 @@ const Audiovisual = () => {
       <Card className={styles.cardLeituras}>
         <Leituras books={exampleBooks} />
       </Card>
-      <Card className={styles.cardVideos}>
+{/*       <Card className={styles.cardVideos}>
         <VideoThumbnails videos={exampleVideos} />
-      </Card>
+      </Card> */}
     </div>
   );
 };

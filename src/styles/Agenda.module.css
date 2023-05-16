@@ -3,13 +3,16 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    box-sizing: border-box;
   }
   
   .titulo {
     font-size: 28px;
-    text-align: left;
+    text-align: center;
     font-weight: 600;
     padding: 0 0 1em 1em;
+    color: #f1fa8c;
+
   }
 
   .eventoCard {
@@ -19,7 +22,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --webkit-backdrop-filter: blur(10px);
     --moz-backdrop-filter: blur(10px);
-    max-width: 50%;
+    max-width: 100%;
     max-height: 50%;
   }
   
@@ -30,22 +33,38 @@
     border-radius: 10px;
   }
   
+  /* src/styles/Agenda.module.css */
+
+.eventoDataHora {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #ff5722; 
+  padding: 10px 0 10px 0;
+}
+
   .eventoNome {
     margin-top: 1rem;
+    color: #f1fa8c;
+    font-size: 1.5em;
+    font-weight: 600;
   }
   
   .eventoDescricao {
     margin-top: 0.5rem;
+    font-weight: 400;
+    text-align:start;
   }
   
   .eventoData {
-    margin-top: 0.5rem;
+    
     font-weight: bold;
-    color: #ff5722;
+    color: #ffa322;
+    font-size: 22px;
   }
   
   .eventoLocal {
     margin-top: 0.5rem;
+    font-weight: 600;
   }
   
   @media (max-width: 768px) {
@@ -56,9 +75,10 @@
       }
       
     .eventoCard {
-    max-width: 50%;
+    max-width: 100%;
     max-height: 50%;
     }
+
     .titulo {
         text-align: center;
         font-size: 22px;
