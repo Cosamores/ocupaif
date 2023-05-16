@@ -12,16 +12,17 @@ const Header = () => {
       </div>
       <nav>
          <ul className={styles.menu}>
-          <li>
+{/*           <li>
             <Link href="/" className={styles.menuItem}>
               Home
             </Link>
-          </li>
-          <li>
+          </li> */}
+{/*           <li>
             <Link href="/Audiovisual" className={styles.menuItem}>
               Formação
             </Link>
-          </li>
+          </li> */}
+          
         </ul>
       </nav>
     </header>

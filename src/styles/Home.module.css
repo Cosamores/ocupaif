@@ -22,7 +22,6 @@
     overflow-y: auto;
   }
   
-  /* Adicione a media query */
   @media (max-width: 768px) {
     .main {
       flex-direction:column-reverse;
