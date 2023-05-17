@@ -8,11 +8,13 @@ const EventoCard = ({ imagem, nome, descricao, data, hora, local }) => {
       <img className={styles.eventoImagem} src={imagem} alt={nome} />
       <h3 className={styles.eventoNome}>{nome}</h3>
       <p className={styles.eventoDescricao}>{descricao}</p>
+      <p className={styles.eventoLocal}>{local}</p>
+      <p className={styles.eventoData}> {hora}</p>
       <p className={styles.eventoDataHora}>
         {data} 
       </p>
-      <p className={styles.eventoData}> {hora}</p>
-      <p className={styles.eventoLocal}>{local}</p>
+
+ 
     </div>
   );
 };
