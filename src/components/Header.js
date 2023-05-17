@@ -7,22 +7,15 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logoContainer}>
-        <img className={styles.logo} src="/images/logo.png" alt="Logo Ocupa IFSP" />
-        <h1 className={styles.title}>Ocupa IFSP</h1>
+        <img className={styles.logo} src="/images/ocupa_logo.png" alt="Logo Ocupa IFSP" />
+        <Link href="/#cartaAberta">
+          <button className={styles.oQueButton}>
+            <h1 className={styles.title}>O que é o OcupaIF?</h1>
+          </button>
+        </Link>
       </div>
       <nav>
-         <ul className={styles.menu}>
-{/*           <li>
-            <Link href="/" className={styles.menuItem}>
-              Home
-            </Link>
-          </li> */}
-{/*           <li>
-            <Link href="/Audiovisual" className={styles.menuItem}>
-              Formação
-            </Link>
-          </li> */}
-          
+        <ul className={styles.menu}>
         </ul>
       </nav>
     </header>

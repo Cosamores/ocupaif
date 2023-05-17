@@ -1,5 +1,5 @@
 .footer {
-    position: static;
+    position: relative;
     bottom: 0;
     width: 100%;
     background-color: rgba(30, 30, 30, 0.8);
@@ -8,6 +8,7 @@
     padding: 1rem 0;
     text-align: center;
     color: #ffffff;
+    box-shadow: 0px 2px 10px 2px #ff5622ac;
   }
   
   .footer a {
@@ -20,20 +21,22 @@
     text-decoration: underline;
   }
   
-  .socialLinks {
+/*   .socialLinks {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-  }
+  } */
   
   .footer h3 {
     font-size: 26px;
     padding: 10px;
+    color: rgb(129, 221, 129);
+    font-size: 1.3rem;
+    font-weight: 500;
+    display: inline-block;
   }
-  .newsletter h3 {
-    color: rgb(129, 221, 129)
-  }
+
 
   .newsletter input {
     margin: 15px 1em 1em 1em;
@@ -70,5 +73,7 @@
     .callToAction {
         font-size: 18px;
         padding-top: 3%;
+        text-align: center;
+
     }
   }

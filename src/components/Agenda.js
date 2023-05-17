@@ -20,7 +20,7 @@ const EventoCard = ({ imagem, nome, descricao, data, hora, local }) => {
 const Agenda = () => {
   const eventos = [
     {
-      imagem: '/images/evento1.png',
+      imagem: '/images/oficina_cartazes.png',
       nome: 'Oficina de Cartazes',
       descricao: `Junte-se a nós para criar cartazes impactantes e cheios de significado, que serão colados nos murais do instituto. Queremos tornar visíveis as questões que mais importam e promover debates construtivos em nossa comunidade acadêmica.`,
       data: 'Quarta-feira, 24 de maio',

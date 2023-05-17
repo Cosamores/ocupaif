@@ -12,14 +12,14 @@
   }
   
   .titulo {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 600;
     color: #f1fa8c;
     text-align: center;
   }
   
   .subtitulo {
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 15px;
     margin-bottom: 0;
     font-style: italic;
@@ -27,7 +27,7 @@
   }
   
   .conteudo {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
     padding: 0 0 10px 0;
   }
@@ -38,4 +38,13 @@
         margin: 0px auto;
         padding-bottom: 50px;
     }
+
+    .titulo {
+      padding-bottom: 20px;
+    }
+
+    .conteudo {
+      font-size: 16px;
+    }
+
   }

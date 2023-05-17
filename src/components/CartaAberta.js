@@ -14,7 +14,6 @@ const CartaAberta = ({ titulo, subtitulo, conteudo }) => {
   return (<div>
    <h2 className={styles.titulo}>{titulo}</h2>
     <section className={styles.cartaAberta}>
-      
       <h3 className={styles.subtitulo}>{subtitulo}</h3>
       <p className={styles.conteudo} dangerouslySetInnerHTML={{ __html: conteudoFormatado }}></p>
     </section>
