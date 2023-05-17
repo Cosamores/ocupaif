@@ -32,6 +32,16 @@
     line-height: 1.5;
     padding: 0 0 10px 0;
   }
+
+  
+  .convidamos {
+    color: #f7f8e0;  
+    font-size: 18px;
+    background-color: rgb(15, 6, 6);  
+    border-radius: 15px;
+    padding: 12px;
+    box-sizing:border-box;
+  }
   
   @media (max-width:768px) {
     .cartaAberta {

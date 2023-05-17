@@ -22,7 +22,7 @@ const Agenda = () => {
     {
       imagem: '/images/oficina_cartazes.png',
       nome: 'Oficina de Cartazes',
-      descricao: `Junte-se a nós para criar cartazes impactantes e cheios de significado, que serão colados nos murais do instituto. Queremos tornar visíveis as questões que mais importam e promover debates construtivos em nossa comunidade acadêmica.`,
+      descricao: `Junte-se a nós para criarmos cartazes impactantes e cheios de significado, que serão colados nos murais do instituto. Queremos tornar visíveis as questões que mais importam e promover debates construtivos em nossa comunidade acadêmica.`,
       data: 'Quarta-feira, 24 de maio',
       hora:' 20:30 (durante o intervalo)',
       local: 'Local: Refeitório do IFSP',
