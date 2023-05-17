@@ -13,8 +13,7 @@
   .leftContainer {
     flex: 0 0 0 70%;
     max-width: 70%;
-    margin-right: 1%;
-    margin-left: 1%;
+    margin-left: 1% auto;
 
   }
   
