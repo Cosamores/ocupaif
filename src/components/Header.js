@@ -2,10 +2,15 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from '../styles/Header.module.css';
+import Head from 'next/head';
 
 const Header = () => {
   return (
     <header className={styles.header}>
+      <Head>
+        <link rel="shortcut icon" href="/favicon.png" />
+      </Head>
+
       <div className={styles.logoContainer}>
         <img className={styles.logo} src="/images/ocupa_logo.png" alt="Logo Ocupa IFSP" />
         <Link href="/#cartaAberta">
