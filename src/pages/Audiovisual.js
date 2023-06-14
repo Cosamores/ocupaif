@@ -10,28 +10,34 @@ const Audiovisual = () => {
     {
       title: 'Pedagogia do Oprimido',
       author: 'Paulo Freire',
-      url: 'https://www.amazon.com/Pedagogia-Oprimido-Portuguese-Paulo-Freire/dp/8577533271',
+      url: 'https://cpers.com.br/wp-content/uploads/2019/10/Pedagogia-do-Oprimido-Paulo-Freire.pdf',
     },
     {
-      title: 'A Universidade Necessária',
+      title: 'O povo brasileiro',
       author: 'Darcy Ribeiro',
-      url: 'https://www.amazon.com.br/Universidade-Necess%C3%A1ria-Darcy-Ribeiro/dp/8532502064',
+      url: 'https://moodle.ifsc.edu.br/mod/resource/view.php?id=423119',
     },
     {
       title: 'As Veias Abertas da América Latina',
       author: 'Eduardo Galeano',
-      url: 'https://www.amazon.com/Veias-Abertas-Am%C3%A9rica-Latina/dp/8535908068',
+      url: 'https://edisciplinas.usp.br/pluginfile.php/4194484/mod_resource/content/1/As%20veias%20abertas%20da%20Am%C3%A9rica%20Latina.pdf',
     },
     {
-      title: 'A Sociedade do Espetáculo',
-      author: 'Guy Debord',
-      url: 'https://www.amazon.com/Sociedade-Espet%C3%A1culo-Guy-Debord/dp/8575596591',
+      title: 'Quarto de despejo',
+      author: "Maria Carolina de Jesus",
+      url: 'https://dpid.cidadaopg.sp.gov.br/pde/arquivos/1623677495235~Quarto%20de%20Despejo%20-%20Maria%20Carolina%20de%20Jesus.pdf.pdf'
+
     },
     {
-      title: 'Poder, Estado e Educação',
-      author: 'Ivanilde Apoluceno de Oliveira',
-      url: 'https://www.amazon.com/Poder-Estado-Educa%C3%A7%C3%A3o-Portuguese-Brasil/dp/8574198183',
+      title: 'Peles negras, máscaras brancas',
+      author: 'Franz Fannon',
+      url:'https://www.geledes.org.br/wp-content/uploads/2014/05/Frantz_Fanon_Pele_negra_mascaras_brancas.pdf'
     },
+    {
+      title: 'Manifesto Ciborgue: Ciência, tecnologia e feminismo-socialista no final do século XX',
+      author: 'Donna J.Haraway',
+      url: 'https://cochabambahotel.noblogs.org/files/2017/03/Manifesto_Ciborgue.pdf'
+    }
   ];
 
   const exampleVideos = [

@@ -13,8 +13,18 @@ const Header = () => {
         <button className={styles.oQueButton}>
           <h1 className={styles.title}><ul className={styles.menu}>
           <li>
+            <Link href="/">
+              <span className={styles.menuItem}>Inicio</span>
+            </Link>
+          </li>
+          <li>
             <Link href="/EventosLista">
               <span className={styles.menuItem}>Eventos</span>
+            </Link>
+          </li>
+          <li>
+            <Link href="/Audiovisual">
+              <span className={styles.menuItem}>Leituras</span>
             </Link>
           </li>
         </ul></h1>

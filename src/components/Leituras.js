@@ -1,4 +1,3 @@
-// components/Leituras.js
 import React from 'react';
 import styles from '../styles/Leituras.module.css';
 
