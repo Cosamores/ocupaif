@@ -12,7 +12,7 @@ const EventosLista = () => {
       {
      
         imagem: '/images/roda1.jpg',
-        nome: 'Roda de conversa do OcupaiF',
+        nome: 'Roda de conversa do OcupaIF',
         descricao: `Nos reuniremos no refeitório para conversarmos sobre os próximos passos do coletivo`,
         data: 'Quarta-feira, 07 de junho',
         hora:' 20:30 (durante o intervalo)',
