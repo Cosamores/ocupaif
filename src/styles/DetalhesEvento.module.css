@@ -3,6 +3,7 @@
         background: rgb(227,227,227);
         background: linear-gradient(180deg, rgba(227,227,227,0.3) 80%, var(--background-light) 100%);
         border-radius: 10px;
+        padding: 10px;
     }
     .nome {
       margin-top: 1rem;
@@ -14,8 +15,8 @@
     }
     
     .descricao {
-      margin-top: 0.5rem;
-      font-weight: 400;
+      margin-top: 0.8rem;
+      font-weight: 600;
       text-align:justify;
       max-width: inherit;
       padding: 18px;
@@ -29,11 +30,11 @@
       font-weight: bold;
       color: var(--if-color);
       font-size: 22px;
-      padding: 0 10px;
+      padding: 10px;
     }
     
     .local {
       font-weight: 600;
-      padding:10px;
+      padding:0 10px 20px 10px;
     }
     
