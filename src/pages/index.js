@@ -2,7 +2,7 @@
 import React from 'react';
 import Card from '../components/Card';
 import CartaAberta from '../components/CartaAberta';
-import Agenda from '../components/Agenda';
+import Evento from '../components/Evento';
 import styles from '../styles/Home.module.css';
 
 const Home = () => {
@@ -15,13 +15,13 @@ const Home = () => {
   return (
     <main className={styles.main}>
         <div className={styles.leftContainer} id="cartaAberta">
-        <Card>
+        <Card className={styles.card}>
         <CartaAberta titulo={titulo} subtitulo={subtitulo} conteudo={conteudo} convidamos={convidamos}/>
         </Card>
         </div>
         <div className={styles.rightContainer}>
-        <Card >
-          <Agenda />
+        <Card className={styles.card}>
+          <Evento />
         </Card>
         </div>
     </main>

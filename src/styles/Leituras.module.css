@@ -1,6 +1,6 @@
 /* styles/Leituras.module.css */
 .container {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: var(--background-light);
     --webkit-backdrop-filter: blur(10px);
     border-radius: 10px;
     padding: 20px;

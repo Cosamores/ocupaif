@@ -1,22 +1,27 @@
 /* src/styles/CartaAberta.module.css */
 .cartaAberta {
-    background-color: rgba(49, 49, 49, 0.6);
+    background-color: rgba(253, 253, 253, 0.421);
     --webkit-backdrop-filter: blur(5px);
     --moz-backdrop-filter: blur(5px);
     border-radius: 10px;
-    padding: 20px 20px 150px 20px;
-    color: #ffffff;
+    padding: 20px 20px 0px 20px;
+    color: #000000;
     max-width: 90%;
     min-height: 50rem;
     text-align: justify;
+ 
   }
-  
+  .cartaContainer {
+    display: flex;
+    justify-content: center;
+  }
   .titulo {
     font-size: 28px;
     font-weight: 600;
-    color: #f1fa8c;
+    color: var(--red-standard);
     text-align: center;
     margin-bottom: 1.8rem ;
+    padding: 10px;
   }
   
   .subtitulo {
@@ -24,7 +29,7 @@
     margin-top: 15px;
     margin-bottom: 0;
     font-style: italic;
-    color: #bababa;
+    color: #191515;
   }
   
   .conteudo {
@@ -35,9 +40,9 @@
 
   
   .convidamos {
-    color: #f7f8e0;  
+    color: #000000;  
     font-size: 18px;
-    background-color: rgb(15, 6, 6);  
+    background-color: #00be2345;  
     border-radius: 15px;
     padding: 12px;
     box-sizing:border-box;
@@ -63,4 +68,9 @@
 
     }
 
+    .cartaContainer {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
   }

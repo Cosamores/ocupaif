@@ -1,0 +1,55 @@
+/* EventosLista.module.css */
+
+.eventosLista {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem; /* You can adjust this to control the spacing between the two sections */
+    align-items: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--background-light);
+  }
+  
+  .eventosFuturos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: black;
+  }
+  
+  .eventosPassados {
+    max-width: 100%;
+    
+  }
+  .eventosContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .cardSmall {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    
+
+  }
+  .titulo {
+    font-size: 40px;
+    color: var(--orange-standard);
+  }
+  
+  @media (max-width: 768px) {
+    .eventosLista {
+      flex-direction: column;
+    }
+    .eventosFuturos,
+    .eventosPassados {
+      margin-bottom: 2rem;
+      flex: 1;
+    }
+  }
+  

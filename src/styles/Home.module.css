@@ -1,5 +1,6 @@
 /* src/styles/Home.module.css */
 .main {
+  background-color: var(--background-light);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -19,12 +20,15 @@
   
   .rightContainer {
     flex: 0 0 30%;
-    max-width: 30%;
-    overflow-y: auto;
+    max-width: fit-content;
+    overflow-y:hidden;
     margin-right: 1% auto;
-    
   }
   
+  .card {
+    max-width: 100%;
+  }
+
   @media (max-width: 768px) {
     .main {
       flex-direction:column-reverse;

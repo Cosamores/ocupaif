@@ -5,11 +5,11 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import styles from '../styles/Footer.module.css';
 
 const Footer = (props) => {
-const submitHandler = () => {
+/* const submitHandler = () => {
     const button = document.querySelector('submitButton');
     button.preventDefault();
     alert('Entre em nosso grupo do Whatsapp.');
-}
+} */
 
     return (
     <footer className={styles.footer}>

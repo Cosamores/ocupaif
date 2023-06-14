@@ -7,20 +7,24 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --footer-bottom: 0;
+  --background-dark: rgb(15, 6, 6);  
+  --background-light: #f1f1df;
+  --orange-standard: #ff5722; 
+  --yellow-standard: #ffa322;
+  --title-color: #f1fa8c;
+  --if-color: #00bf63;
+  --red-standard: #ce242a;
+  --header-footer-color: 
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: var(--background-light);
+    --background-start-rgb: #d8d8c1;
+    --background-end-rgb: #2020ae;
   }
 }
 
-html {
-
-
-}
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
