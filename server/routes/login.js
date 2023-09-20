@@ -1,5 +1,6 @@
 import { compare } from 'bcryptjs';
 import jwt from 'jsonwebtoken';
+require('dotenv').config();
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -14,7 +15,7 @@ export default async function handler(req, res) {
 
   // Here, bcrypt can be used to hash the password and compare, but for brevity, we'll compare directly
   if (username === adminUser && password === adminPass) {
-    const token = jwt.sign({ username }, 'yourSecretKey'); // NOTE: Use a strong secret key!
+    const token = jwt.sign({ username }, process.env.JWT_SECRET); // NOTE: Use a strong secret key!
     return res.status(200).json({ token });
   }
 

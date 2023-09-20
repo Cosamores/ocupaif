@@ -3,6 +3,7 @@ const router = express.Router();
 const { body, validationResult } = require('express-validator');
 const Admin = require('../models/Admin');
 const jwt = require('jsonwebtoken');
+require('dotenv').config();
 
 router.post('/login', [
   body('username').isLength({ min: 5 }).withMessage('Username must be at least 5 characters long.'),

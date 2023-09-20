@@ -1,12 +1,13 @@
+
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const eventsRouter = require('./routes/events');
 const commentsRouter = require('./routes/comments');
+const eventsRouter = require('./routes/Events');
 const errorHandler = require('./middleware/errorHandler');
 const authRoutes = require('./routes/auth');
-
 require('dotenv').config();
+
 
 const app = express();
 const port = process.env.PORT || 5000;

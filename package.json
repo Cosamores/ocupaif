@@ -3,45 +3,17 @@
   "version": "0.1.2",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
     "start": "concurrently \"npm run start-server\" \"npm run start-frontend\"",
     "start-server": "cd server && npm start",
-    "start-frontend": "cd frontend && npm start",
-    "lint": "next lint",
-    "server": "nodemon server/server.js",
-    "client": "next dev"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/server": "^11.11.0",
-    "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.14.9",
-    "@mui/material": "^5.14.10",
-    "autoprefixer": "10.4.15",
-    "axios": "^1.5.0",
-    "bcrypt": "^5.1.1",
-    "body-parser": "^1.20.2",
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "eslint": "^8.49.0",
-    "eslint-config-next": "^13.5.2",
-    "express": "^4.18.2",
-    "express-validator": "^7.0.1",
-    "joi": "^17.10.2",
-    "jsonwebtoken": "^9.0.2",
-    "mongodb": "^6.1.0",
-    "mongoose": "^7.5.2",
-    "next": "13.5.2",
-    "postcss": "8.4.30",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "start-frontend": "cd frontend && npm run start"
   },
   "description": "Website for the OCUPAIF student collective in Caraguatatuba BR",
-  "main": "server.js",
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^8.2.1"
+  },
+  "dependencies": {
+    "node": "^20.6.0"
   }
 }
