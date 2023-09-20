@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import styles from '../styles/Agenda.module.css';
 import Modal from './Modal';
 import DetalhesEvento from './DetalhesEvento';
+import Image from 'next/image';
 
 const EventoCard = ({ imagem, nome, descricao, data, local, small }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,10 +22,12 @@ const EventoCard = ({ imagem, nome, descricao, data, local, small }) => {
         className={small ? styles.cardSmall : styles.eventoCard} 
         onClick={handleOpenModal}
       >
-        <img 
+        <Image 
           className={small ? styles.imagemSmall : styles.eventoImagem} 
           src={imagem} 
-          alt={nome} 
+          alt={nome}
+          width={500}
+          height={500} 
         />
         {!small && (
           <>

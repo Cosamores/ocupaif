@@ -5,7 +5,8 @@ function MyDocument() {
     <Html lang="en">
       <Head>
         <script
-          async
+          async 
+          type="next/script"
           src="https://www.googletagmanager.com/gtag/js?id=G-WXYZ7W0SWY"
         ></script>
         <script src="/analytics.js" defer></script>

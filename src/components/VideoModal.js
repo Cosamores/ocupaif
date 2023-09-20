@@ -2,6 +2,7 @@
 import React from 'react';
 import Card from './Card';
 import styles from '../styles/VideoModal.module.css';
+import Image from 'next/image';
 
 const VideoModal = ({ video, onClose }) => {
   return (
@@ -22,7 +23,7 @@ const VideoModal = ({ video, onClose }) => {
           ></iframe>
           <p>{video.description}</p>
           <div className={styles.presenterInfo}>
-            <img src={video.presenterImage} alt={video.presenter} />
+            <Image src={video.presenterImage} alt={video.presenter} />
             <p>{video.presenterBio}</p>
           </div>
         </Card>
