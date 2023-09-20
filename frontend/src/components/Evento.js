@@ -8,7 +8,7 @@ const Evento = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch('/api/events'); // Using the relative path as the frontend and backend are linked.
+        const response = await fetch('/.netlify/functions/events');
         const data = await response.json();
 
         const nextEvent = data

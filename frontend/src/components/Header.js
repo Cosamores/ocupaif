@@ -24,7 +24,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/Audiovisual">
+            <Link href="/LeiturasPage">
               <span className={styles.menuItem}>Leituras</span>
             </Link>
           </li>

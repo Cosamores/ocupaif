@@ -8,7 +8,7 @@ const EventosLista = () => {
     useEffect(() => {
         async function fetchEvents() {
             try {
-                const response = await fetch('/api/events');
+                const response = await fetch('/.netlify/functions/events');
                 if (!response.ok) throw new Error('Network response was not ok');
                 const data = await response.json();
                 setEventos(data);

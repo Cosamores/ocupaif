@@ -9,7 +9,7 @@ const Comentarios = ({ eventoName }) => {  // Assuming the event name is passed 
     useEffect(() => {
         async function fetchComments() {
             try {
-                const response = await fetch(`/api/comments?evento=${eventoName}`);
+                const response = await fetch(`/.netlify/functions/comments?evento=${eventoName}`);
                 if (!response.ok) throw new Error('Network response was not ok');
                 const data = await response.json();
                 setComments(data);
@@ -32,7 +32,7 @@ const Comentarios = ({ eventoName }) => {  // Assuming the event name is passed 
         };
 
         try {
-            const response = await fetch('/api/comments', {
+            const response = await fetch('/.netlify/functions/comments', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
