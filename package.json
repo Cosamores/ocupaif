@@ -9,7 +9,7 @@
     "start-server": "cd server && npm start",
     "start-frontend": "cd frontend && npm start",
     "lint": "next lint",
-    "server": "nodemon server.js"
+    "server": "nodemon server/server.js"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
