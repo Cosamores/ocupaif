@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "concurrently \"npm run start-server\" \"npm run start-frontend\"",
     "start-server": "cd server && npm start",
-    "start-frontend": "cd frontend && npm start",
+    "start-frontend": "next dev",
     "lint": "next lint",
     "server": "nodemon server.js",
     "client": "next dev"

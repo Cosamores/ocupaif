@@ -23,7 +23,7 @@ const VideoModal = ({ video, onClose }) => {
           ></iframe>
           <p>{video.description}</p>
           <div className={styles.presenterInfo}>
-            <Image src={video.presenterImage} alt={video.presenter} />
+            <Image src={video.presenterImage} alt={video.presenter} width={500} height={500} />
             <p>{video.presenterBio}</p>
           </div>
         </Card>
