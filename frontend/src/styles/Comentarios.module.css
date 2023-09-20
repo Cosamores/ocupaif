@@ -1,0 +1,60 @@
+.comentarios {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+
+
+  .titulo {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .commentBlock {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8daaf55;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .commentName {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .mensagem {
+    margin-bottom: 5px;
+  }
+  
+  .nameInput {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 50%;
+    border-radius: 10px;
+  }
+  
+  .commentInput {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 50%;
+    border-radius: 10px;
+  }
+  
+  .submitButton {
+    padding: 10px;
+    border: 1px solid var(--orange-standard);
+    border-radius: 30px;
+    background: linear-gradient(100deg, rgba(61, 255, 43, 0.3) 0%, #fd0b0b 100%);
+    font-weight: 700;
+    margin: 20px;
+}
+  

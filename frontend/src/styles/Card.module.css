@@ -1,0 +1,13 @@
+/* src/styles/Card.module.css */
+.card {
+  background-color: rgb(255, 247, 230);
+  border-radius: 10px;
+  color: #000000;
+  max-width: 82rem;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+
