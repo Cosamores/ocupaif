@@ -38,3 +38,5 @@ next-env.d.ts
 server/.env
 server/node_modules/
 frontend/node_modules/
+# Local Netlify folder
+.netlify

@@ -14,10 +14,11 @@ const port = process.env.PORT || 5000;
 
 // Middleware setup
 app.use(cors({
-  origin: ['http://localhost:3001'],  // Modify for frontend's domain.
+  origin: ['https://ocupaif.netlify.app'],  
   methods: ["GET", "POST", "PATCH", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
 app.use(express.json());
 
 // Routes setup
