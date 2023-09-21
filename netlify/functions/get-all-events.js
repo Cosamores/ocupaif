@@ -1,3 +1,5 @@
+//get-all-events
+
 const { MongoClient } = require('mongodb');
 const uri = process.env.MONGODB_URI; // Set this in your Netlify environment variables
 
