@@ -28,10 +28,6 @@ const EventSchema = new mongoose.Schema({
   dataComp: {
     type: Date,
     required: true
-  },
-  guest: {
-    type: String,
-    required: false
   }
 });
 
