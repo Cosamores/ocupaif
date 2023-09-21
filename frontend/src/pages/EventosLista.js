@@ -2,7 +2,6 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import EventoCard from '../components/EventoCard';
 import styles from '../styles/EventosLista.module.css';
-import mongoose from 'mongoose';
 
 const EventosLista = () => {
     const [eventos, setEventos] = useState([]);
