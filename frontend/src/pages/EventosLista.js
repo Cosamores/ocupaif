@@ -19,7 +19,7 @@ const EventosLista = () => {
         fetchEvents();
     }, []);
 
-    const now = new Date();
+    const now = useMemo(() => new Date(), []);
 
     const eventosFuturos = useMemo(() => 
         eventos.filter(evento => new Date(evento.dataComp) >= now), 

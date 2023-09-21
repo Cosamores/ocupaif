@@ -1,6 +1,12 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js"
+  "/_error": "pages/_error.js",
+  "/EventosLista": "pages/EventosLista.html",
+  "/Admin": "pages/Admin.html",
+  "/LeiturasPage": "pages/LeiturasPage.html",
+  "/": "pages/index.html",
+  "/admin/login": "pages/admin/login.html",
+  "/admin/Dashboard": "pages/admin/Dashboard.html",
+  "/404": "pages/404.html"
 }

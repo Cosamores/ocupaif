@@ -1,26 +1,32 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import Script from "next/script";  // Import the Script component
 
-function MyDocument() {
-  return (
-    <Html lang="en">
-      <Head>
-        <script
-          async 
-          type="next/script"
-          src="https://www.googletagmanager.com/gtag/js?id=G-WXYZ7W0SWY"
-        ></script>
-        <script src="/analytics.js" defer></script>
-      </Head>
-      <body>
-        <Main />
-        <div id="modal-root"></div>
-        <NextScript />
-      </body>
-    </Html>
-  );
+class MyDocument extends Document {
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps };
+  }
+
+  render() {
+    return (
+      <Html lang="en">
+        <Head>
+          {/* Load the Google Tag Manager script */}
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-WXYZ7W0SWY"
+            strategy="afterInteractive"
+          />
+          {/* Load your custom analytics script */}
+          <Script src="/analytics.js" strategy="afterInteractive" defer />
+        </Head>
+        <body>
+          <Main />
+          <div id="modal-root"></div>
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }
-
-MyDocument.getInitialProps = Document.getInitialProps;
-MyDocument.renderDocument = Document.renderDocument;
 
 export default MyDocument;
