@@ -11,7 +11,6 @@ exports.handler = async function(event, context) {
     // Connect to the database if not connected
     if (!isConnected()) {
         await mongoose.connect(process.env.ATLAS_URI, {
-            useNewUrlParser: true, 
             useUnifiedTopology: true
         });
     }
