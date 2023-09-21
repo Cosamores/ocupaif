@@ -28,10 +28,12 @@ app.use('/auth', authRoutes);
 
 // MongoDB setup
 const uri = process.env.ATLAS_URI;
+console.log('Atlas URI' + uri)
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 const connection = mongoose.connection;
 connection.once('open', () => {
   console.log("MongoDB database connection established successfully");
+  
 });
 
 // Error handling middleware - Place after other app.use() calls
