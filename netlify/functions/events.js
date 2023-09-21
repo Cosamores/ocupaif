@@ -1,4 +1,4 @@
-const Event = require('../models/Event');
+const Event = require('../server/models/Event');
 
 exports.handler = async (event, context) => {
   if (event.httpMethod === "GET") {

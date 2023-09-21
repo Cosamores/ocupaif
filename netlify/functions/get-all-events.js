@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Event = require('../models/Event');
+const Event = require('../server/models/Event');
 
 // Check if we're already connected to the database
 const isConnected = () => {
