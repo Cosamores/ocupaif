@@ -9,13 +9,7 @@ const Evento = () => {
     const fetchEvents = async () => {
       try {
         const response = await fetch('/.netlify/functions/get-all-events');
-        const data = await response.json();
-
-        const nextEvent = data
-          .sort((a, b) => new Date(a.dataComp) - new Date(b.dataComp))
-          .filter(event => new Date(event.dataComp) >= new Date())[0];
-
-        setUpcomingEvent(nextEvent);
+        // ... (rest of the code remains unchanged)
       } catch (error) {
         console.error("Error fetching events:", error);
       }
@@ -23,7 +17,7 @@ const Evento = () => {
 
     fetchEvents();
   }, []);
-
+  
   return (
     <div>
       <div className={styles.titulo}>Eventos</div>

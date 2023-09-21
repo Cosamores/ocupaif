@@ -1,23 +1,22 @@
-import { compare } from 'bcryptjs';
-import jwt from 'jsonwebtoken';
-
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).end();
+exports.handler = async (event, context) => {
+  if (event.httpMethod !== 'POST') {
+    return {
+      statusCode: 405,
+      body: JSON.stringify({ error: 'Method not allowed' })
+    };
   }
 
-  const { username, password } = req.body;
+  const providedPassword = JSON.parse(event.body).password;
 
-  // Use environment variables for admin credentials
-  const adminUser = process.env.ADMIN_USER;
-  const adminPass = process.env.ADMIN_PASS;
-
-  // Directly compare with environment variables
-  if (username === adminUser && password === adminPass) {
-    // Generate JWT
-    const token = jwt.sign({ username }, process.env.JWT_SECRET);
-    return res.status(200).json({ token });
+  if (providedPassword === process.env.ADMIN_PASSWORD) {
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ authenticated: true })
+    };
+  } else {
+    return {
+      statusCode: 401,
+      body: JSON.stringify({ authenticated: false, error: 'Invalid password' })
+    };
   }
-
-  return res.status(401).json({ error: 'Invalid login.' });
-}
+};

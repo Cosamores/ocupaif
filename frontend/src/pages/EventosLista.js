@@ -10,10 +10,8 @@ const EventosLista = () => {
         async function fetchEvents() {
             try {
                 const response = await fetch('/.netlify/functions/get-all-events');
-                if (!response.ok) throw new Error('Network response was not ok');
                 const data = await response.json();
                 setEventos(data);
-                console
             } catch (error) {
                 console.error("Error fetching events:", error);
             }

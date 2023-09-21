@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../styles/Comentarios.module.css';
 
-const Comentarios = ({ eventoName }) => {  // Assuming the event name is passed as a prop
+const Comentarios = ({ eventoName }) => {
     const [comments, setComments] = useState([]);
     const [newComment, setNewComment] = useState('');
     const [name, setName] = useState('');
@@ -11,7 +11,6 @@ const Comentarios = ({ eventoName }) => {  // Assuming the event name is passed 
         async function fetchComments() {
             try {
                 const response = await fetch(`/.netlify/functions/comments?evento=${eventoName}`);
-                if (!response.ok) throw new Error('Network response was not ok');
                 const data = await response.json();
                 setComments(data);
             } catch (error) {
@@ -28,7 +27,7 @@ const Comentarios = ({ eventoName }) => {  // Assuming the event name is passed 
         const commentData = {
             nome: name.trim(),
             comentario: newComment.trim(),
-            data: new Date(), 
+            data: new Date(),
             evento: eventoName
         };
 
@@ -40,7 +39,6 @@ const Comentarios = ({ eventoName }) => {  // Assuming the event name is passed 
                 },
                 body: JSON.stringify(commentData),
             });
-            if (!response.ok) throw new Error('Network response was not ok');
             const data = await response.json();
             setComments(prevComments => [...prevComments, data]);
             setNewComment('');
