@@ -1,55 +1,55 @@
-const mongoose = require('mongoose');
-const Comment = require('../../server/models/Comment');
+const { MongoClient } = require('mongodb');
+const uri = process.env.MONGODB_URI;
 
-exports.handler = async function(event, context) {
-    const headers = {
-        'Access-Control-Allow-Origin': 'https://www.ocupaif.netlify.app', // Replace with your domain
-        'Content-Type': 'application/json'
-    };
+exports.handler = async (event, context) => {
+  const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
-    if(event.httpMethod === 'GET') {
-        const { evento } = event.queryStringParameters;
-        
-        try {
-            const comments = await Comment.find({ evento });
-            return {
-                statusCode: 200,
-                headers: headers,
-                body: JSON.stringify(comments)
-            };
-        } catch (error) {
-            return {
-                statusCode: 500,
-                headers: headers,
-                body: JSON.stringify({ message: "Error fetching comments" })
-            };
-        }
+  if (event.httpMethod === 'GET') {
+    const eventoName = event.queryStringParameters.evento;
+
+    try {
+      await client.connect();
+      const collection = client.db("ocupaif").collection("comments");
+      const comments = await collection.find({ evento: eventoName }).toArray();
+
+      return {
+        statusCode: 200,
+        body: JSON.stringify(comments)
+      };
+    } catch (error) {
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: 'Failed fetching comments' })
+      };
+    } finally {
+      await client.close();
     }
+  }
 
-    if(event.httpMethod === 'POST') {
-        const commentData = JSON.parse(event.body);
+  if (event.httpMethod === 'POST') {
+    const commentData = JSON.parse(event.body);
 
-        try {
-            const newComment = new Comment(commentData);
-            await newComment.save();
-            return {
-                statusCode: 201,
-                headers: headers,
-                body: JSON.stringify(newComment)
-            };
-        } catch (error) {
-            return {
-                statusCode: 500,
-                headers: headers,
-                body: JSON.stringify({ message: "Error posting comment" })
-            };
-        }
+    try {
+      await client.connect();
+      const collection = client.db("yourDBName").collection("comentarios");
+      const result = await collection.insertOne(commentData);
+
+      return {
+        statusCode: 200,
+        body: JSON.stringify(result.ops[0])
+      };
+    } catch (error) {
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: 'Failed posting comment' })
+      };
+    } finally {
+      await client.close();
     }
+  }
 
-    // Default response if no condition above is met
-    return {
-        statusCode: 405,
-        headers: headers,
-        body: JSON.stringify({ message: "Method not allowed" })
-    };
+  return {
+    statusCode: 405,
+    body: JSON.stringify({ error: 'Method not allowed' })
+  };
 };

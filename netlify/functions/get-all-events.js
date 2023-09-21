@@ -1,38 +1,24 @@
-const mongoose = require('mongoose');
-const Event = require('../../server/models/Event');
-require('dotenv').config();
+const { MongoClient } = require('mongodb');
+const uri = process.env.MONGODB_URI; // Set this in your Netlify environment variables
 
-// Check if we're already connected to the database
-const isConnected = () => {
-    return !!mongoose.connection && mongoose.connection.readyState === 1;
+exports.handler = async (event, context) => {
+  const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+
+  try {
+    await client.connect();
+    const collection = client.db("ocupaif").collection("events");
+    const events = await collection.find({}).toArray();
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify(events)
+    };
+  } catch (error) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: 'Failed fetching events' })
+    };
+  } finally {
+    await client.close();
+  }
 };
-
-exports.handler = async function(event, context) {
-    // Connect to the database if not connected
-    if (!isConnected()) {
-        await mongoose.connect(process.env.ATLAS_URI, {
-            useUnifiedTopology: true
-        });
-    }
-    
-    try {
-        const events = await Event.find();
-        return {
-            statusCode: 200,
-            headers: {
-                'Access-Control-Allow-Origin': 'https://ocupaif.netlify.app',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(events)
-        };
-    } catch (error) {
-        return {
-            statusCode: 500,
-            headers: {
-                'Access-Control-Allow-Origin': 'https://ocupaif.netlify.app', // Replace with your domain in production
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ message: "Internal Server Error" })
-        };
-    }
-}
