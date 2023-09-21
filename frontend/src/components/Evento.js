@@ -9,7 +9,7 @@ const Evento = () => {
     const fetchEvents = async () => {
       try {
         const response = await fetch('/.netlify/functions/get-all-events');
-        // ... (rest of the code remains unchanged)
+
       } catch (error) {
         console.error("Error fetching events:", error);
       }
@@ -17,7 +17,7 @@ const Evento = () => {
 
     fetchEvents();
   }, []);
-  
+
   return (
     <div>
       <div className={styles.titulo}>Eventos</div>
