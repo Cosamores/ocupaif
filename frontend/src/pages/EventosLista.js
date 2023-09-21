@@ -22,14 +22,12 @@ const EventosLista = () => {
     const now = useMemo(() => new Date(), []);
 
     const eventosFuturos = useMemo(() => 
-    Array.isArray(events) ? events.filter(evento => new Date(evento.dataComp) >= now) : [], 
+    Array.isArray(eventos) ? eventos.filter(evento => new Date(evento.dataComp) >= now) : [], 
 [eventos, now]);
 
 const eventosPassados = useMemo(() => 
-    Array.isArray(events) ? events.filter(evento => new Date(evento.dataComp) < now) : [], 
+    Array.isArray(eventos) ? eventos.filter(evento => new Date(evento.dataComp) < now) : [], 
 [eventos, now]);
-
-console.log(eventos);
 
 
     return (
