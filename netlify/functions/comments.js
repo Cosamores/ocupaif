@@ -10,7 +10,7 @@ exports.handler = async (event, context) => {
     try {
       await client.connect();
       const collection = client.db("ocupaif").collection("comments");
-      const comments = await collection.find({ evento: eventoName }).toArray();
+      const comments = await collection.find({ evento: eventoID }).toArray();
 
       return {
         statusCode: 200,
