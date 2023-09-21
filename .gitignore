@@ -40,3 +40,4 @@ server/node_modules/
 frontend/node_modules/
 # Local Netlify folder
 .netlify
+netlify/functions/node_modules
