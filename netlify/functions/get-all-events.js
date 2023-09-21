@@ -20,7 +20,7 @@ exports.handler = async function(event, context) {
         return {
             statusCode: 200,
             headers: {
-                'Access-Control-Allow-Origin': 'https://ocupaif.netlify.app', // Replace with your domain in production
+                'Access-Control-Allow-Origin': 'https://ocupaif.netlify.app',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(events)
