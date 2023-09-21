@@ -23,11 +23,11 @@ const EventosLista = () => {
 
     const eventosFuturos = useMemo(() => 
         eventos.filter(evento => new Date(evento.dataComp) >= now), 
-    [eventos]);
+    [eventos, now]);
 
     const eventosPassados = useMemo(() => 
         eventos.filter(evento => new Date(evento.dataComp) < now), 
-    [eventos]);
+    [eventos, now]);
 
     return (
         <div className={styles.eventosLista}>
