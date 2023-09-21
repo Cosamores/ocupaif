@@ -1,4 +1,4 @@
-/* const Event = require('./server/models/Event');
+const Event = require('../../server/models/Event');
 
 exports.handler = async (event, context) => {
   if (event.httpMethod === "GET") {
@@ -22,4 +22,3 @@ exports.handler = async (event, context) => {
     body: JSON.stringify({ error: "Method not allowed" }),
   };
 };
- */
