@@ -11,7 +11,11 @@ const EventosLista = () => {
             try {
                 const response = await fetch('/.netlify/functions/get-all-events');
                 const data = await response.json();
-                setEventos(data);
+                if (Array.isArray(data)) {  // <-- Check if data is an array
+                    setEventos(data);
+                } else {
+                    console.error("API did not return an array:", data);
+                }
             } catch (error) {
                 console.error("Error fetching events:", error);
             }
@@ -33,19 +37,28 @@ const eventosPassados = useMemo(() =>
     return (
         <div className={styles.eventosLista}>
             <div className={styles.eventosFuturos}>
-                <h2 className={styles.titulo}>Eventos Futuros</h2>
-                {eventosFuturos.map((evento, index) => (
-                    <EventoCard key={index} {...evento} />
-                ))}
-            </div>
-            <div className={styles.eventosPassados}>
-                <h2 className={styles.titulo}>Eventos Passados</h2>
-                <div className={styles.eventosContainer}>
-                    {eventosPassados.map((evento, index) => (
-                        <EventoCard key={index} {...evento} small />
-                    ))}
-                </div>
-            </div>
+    <h2 className={styles.titulo}>Eventos Futuros</h2>
+    {eventosFuturos.length > 0 ? (
+        eventosFuturos.map((evento, index) => (
+            <EventoCard key={index} {...evento} />
+        ))
+    ) : (
+        <p>No future events available.</p>
+    )}
+</div>
+<div className={styles.eventosPassados}>
+    <h2 className={styles.titulo}>Eventos Passados</h2>
+    <div className={styles.eventosContainer}>
+        {eventosPassados.length > 0 ? (
+            eventosPassados.map((evento, index) => (
+                <EventoCard key={index} {...evento} small />
+            ))
+        ) : (
+            <p>No past events available.</p>
+        )}
+    </div>
+</div>
+
         </div>
     );
 };

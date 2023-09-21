@@ -50,13 +50,18 @@ const Comentarios = ({ eventoId }) => {
 
     return (
         <div className={styles.comentarios}>
-            <h2 className={styles.titulo}>Comentários:</h2>
-            {comments.map((comment, index) => (
-                <div key={index} className={styles.commentBlock}>
-                    <p className={styles.commentName}>{comment.nome}</p>
-                    <p className={styles.mensagem}>{comment.comentario}</p>
-                </div>
-            ))}
+<h2 className={styles.titulo}>Comentários:</h2>
+{comments.length > 0 ? (
+    comments.map((comment, index) => (
+        <div key={index} className={styles.commentBlock}>
+            <p className={styles.commentName}>{comment.nome}</p>
+            <p className={styles.mensagem}>{comment.comentario}</p>
+        </div>
+    ))
+) : (
+    <p>No comments available. Be the first to comment!</p>
+)}
+
             <form className={styles.form} onSubmit={handleNewCommentSubmit}>
                 <input
                     className={styles.nameInput}
