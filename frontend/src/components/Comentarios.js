@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../styles/Comentarios.module.css';
 
-const Comentarios = ({ eventoName }) => {
+const Comentarios = ({ eventoId }) => {
     const [comments, setComments] = useState([]);
     const [newComment, setNewComment] = useState('');
     const [name, setName] = useState('');
