@@ -1,4 +1,5 @@
-//frontend/pages/EventosLista.jsimport React, { useEffect, useState, useMemo } from 'react';
+//frontend/pages/EventosLista.js
+import React, { useEffect, useState, useMemo } from 'react';
 import EventoCard from '../components/EventoCard';
 import styles from '../styles/EventosLista.module.css';
 
