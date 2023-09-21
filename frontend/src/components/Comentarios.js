@@ -10,7 +10,7 @@ const Comentarios = ({ eventoName }) => {
     useEffect(() => {
         async function fetchComments() {
             try {
-                const response = await fetch(`/.netlify/functions/comments?evento=${eventoName}`);
+                const response = await fetch(`/.netlify/functions/comments?eventoId=${eventoId}`);
                 const data = await response.json();
                 setComments(data);
             } catch (error) {
@@ -18,7 +18,7 @@ const Comentarios = ({ eventoName }) => {
             }
         }
         fetchComments();
-    }, [eventoName]);
+    }, [eventoId]);
 
     const handleNewCommentSubmit = async (e) => {
         e.preventDefault();
@@ -28,7 +28,7 @@ const Comentarios = ({ eventoName }) => {
             nome: name.trim(),
             comentario: newComment.trim(),
             data: new Date(),
-            evento: eventoName
+            eventoId: eventoId
         };
 
         try {
