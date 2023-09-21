@@ -8,7 +8,7 @@ const Evento = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch('/.netlify/functions/events');
+        const response = await fetch('/.netlify/functions/get-all-events');
         const data = await response.json();
 
         const nextEvent = data

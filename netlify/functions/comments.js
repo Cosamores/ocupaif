@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Comment = require('../../server/models/Comment');
-require('dotenv').config();
 
 exports.handler = async function(event, context) {
     const headers = {
