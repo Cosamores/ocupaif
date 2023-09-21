@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Comment = require('../models/Comment');  // Path to your Comment model
+const Comment = require('../../server/models/Comment');  // Path to your Comment model
 
 exports.handler = async function(event, context) {
     if(event.httpMethod === 'GET') {
