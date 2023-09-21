@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Event = require('../../server/models/Event');
+require('dotenv').config();
 
 // Check if we're already connected to the database
 const isConnected = () => {
