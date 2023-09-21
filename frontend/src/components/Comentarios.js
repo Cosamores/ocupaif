@@ -1,3 +1,4 @@
+//frontend/components/comments.js
 import React, { useState, useEffect } from 'react';
 import styles from '../styles/Comentarios.module.css';
 
