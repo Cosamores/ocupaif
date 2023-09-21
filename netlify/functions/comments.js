@@ -5,7 +5,7 @@ exports.handler = async (event, context) => {
   const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
   if (event.httpMethod === 'GET') {
-    const eventoName = event.queryStringParameters.evento;
+    const eventoID = event.queryStringParameters.eventoId;
 
     try {
       await client.connect();
