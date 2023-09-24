@@ -31,7 +31,7 @@ exports.handler = async (event, context) => {
 
     try {
       await client.connect();
-      const collection = client.db("yourDBName").collection("comentarios");
+      const collection = client.db("ocupaif").collection("comments");
       const result = await collection.insertOne(commentData);
 
       return {

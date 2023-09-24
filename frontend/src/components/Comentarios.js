@@ -8,11 +8,13 @@ const Comentarios = ({ eventoId }) => {
     const [name, setName] = useState('');
 
     useEffect(() => {
+        if (!eventoId) return;
+
         async function fetchComments() {
             try {
                 const response = await fetch(`/.netlify/functions/comments?eventoId=${eventoId}`);
                 const data = await response.json();
-                setComments(data);
+                setComments(Array.isArray(data) ? data : []);
             } catch (error) {
                 console.error("Error fetching comments:", error);
             }
