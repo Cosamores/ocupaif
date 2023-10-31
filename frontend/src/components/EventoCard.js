@@ -18,7 +18,7 @@ const EventoCard = ({ imagem, nome, descricao, data, local, small }) => {
 
   return (
     <>
-      <button 
+      <div 
         className={small ? styles.cardSmall : styles.eventoCard} 
         onClick={handleOpenModal}
       >
@@ -26,8 +26,8 @@ const EventoCard = ({ imagem, nome, descricao, data, local, small }) => {
           className={small ? styles.imagemSmall : styles.eventoImagem} 
           src={imagem} 
           alt={nome}
-          width={500}
-          height={500} 
+          width={100}
+          height={100} 
         />
         {!small && (
           <>
@@ -37,7 +37,7 @@ const EventoCard = ({ imagem, nome, descricao, data, local, small }) => {
             <p className={styles.eventoLocal}>{local}</p>
           </>
         )}
-      </button>
+      </div>
       {isOpen && (
         <Modal onClose={handleCloseModal}>
           <DetalhesEvento

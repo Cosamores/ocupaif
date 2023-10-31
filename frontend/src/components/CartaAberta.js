@@ -8,7 +8,7 @@ const CartaAberta = ({ titulo, subtitulo, conteudo, convidamos }) => {
         'TODOS.<br/>'
       ).replace(
         /Ocupar/g,
-        '<br/><strong style="color: var(--if-color);">Ocupar</strong>'
+        '<br/><strong style="color: var(--orange-standard);">Ocupar</strong>'
       ).replace(
         /requisite./g,
         'requisite.<br/><br/>'
@@ -17,7 +17,7 @@ const CartaAberta = ({ titulo, subtitulo, conteudo, convidamos }) => {
     
 const conteudoConvidamos = convidamos.replace(
         /ocupar/g,
-        '<strong className="styles.convidamos" style="color: var(--if-color);">ocupar</strong>');
+        '<strong className="styles.convidamos" style="color: white;">ocupar</strong>');
       
   return (
   <div className={styles.cartaContainer}>

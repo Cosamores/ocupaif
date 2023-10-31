@@ -1,12 +1,7 @@
 {
   "/_app": "pages/_app.js",
-  "/EventosLista": "pages/EventosLista.html",
-  "/_document": "pages/_document.js",
-  "/LeiturasPage": "pages/LeiturasPage.html",
-  "/admin/Admin": "pages/admin/Admin.html",
-  "/admin/Dashboard": "pages/admin/Dashboard.html",
-  "/admin/login": "pages/admin/login.html",
-  "/": "pages/index.html",
   "/_error": "pages/_error.js",
-  "/404": "pages/404.html"
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js",
+  "/EventosLista": "pages/EventosLista.js"
 }

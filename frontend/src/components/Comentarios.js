@@ -1,4 +1,3 @@
-//frontend/components/comments.js
 import React, { useState, useEffect } from 'react';
 import styles from '../styles/Comentarios.module.css';
 
@@ -6,17 +5,25 @@ const Comentarios = ({ eventoId }) => {
     const [comments, setComments] = useState([]);
     const [newComment, setNewComment] = useState('');
     const [name, setName] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         if (!eventoId) return;
 
         async function fetchComments() {
+            setLoading(true);
+            setError(null);
+
             try {
                 const response = await fetch(`/.netlify/functions/comments?eventoId=${eventoId}`);
                 const data = await response.json();
                 setComments(Array.isArray(data) ? data : []);
             } catch (error) {
                 console.error("Error fetching comments:", error);
+                setError("Failed to fetch comments");
+            } finally {
+                setLoading(false);
             }
         }
         fetchComments();
@@ -33,6 +40,9 @@ const Comentarios = ({ eventoId }) => {
             eventoId: eventoId
         };
 
+        setLoading(true);
+        setError(null);
+
         try {
             const response = await fetch('/.netlify/functions/comments', {
                 method: 'POST',
@@ -41,28 +51,45 @@ const Comentarios = ({ eventoId }) => {
                 },
                 body: JSON.stringify(commentData),
             });
+            
+            if (response.status !== 200) {
+                const errorData = await response.json();
+                console.error("Server error:", errorData.error);
+                setError(errorData.error);
+                return;
+            }
+            
             const data = await response.json();
             setComments(prevComments => [...prevComments, data]);
+            
             setNewComment('');
             setName('');
         } catch (error) {
             console.error("Error posting comment:", error);
+            setError("Failed to post comment");
+        } finally {
+            setLoading(false);
         }
     };
 
     return (
         <div className={styles.comentarios}>
-<h2 className={styles.titulo}>Comentários:</h2>
-{comments.length > 0 ? (
-    comments.map((comment, index) => (
-        <div key={index} className={styles.commentBlock}>
-            <p className={styles.commentName}>{comment.nome}</p>
-            <p className={styles.mensagem}>{comment.comentario}</p>
-        </div>
-    ))
-) : (
-    <p>No comments available. Be the first to comment!</p>
-)}
+            <h2 className={styles.titulo}>Comentários:</h2>
+            {loading ? (
+                <p>Loading comments...</p>
+            ) : error ? (
+                <p>{error}</p>
+            ) : comments.length > 0 ? (
+                comments.map((comment, index) => (
+                    <div key={index} className={styles.commentBlock}>
+                        <p className={styles.commentName}>{comment.nome}</p>
+                        <p className={styles.mensagem}>{comment.comentario}</p>
+                        <p className={styles.date}>{new Date(comment.data).toLocaleDateString()}</p>
+                    </div>
+                ))                
+            ) : (
+                <p>No comments available. Be the first to comment!</p>
+            )}
 
             <form className={styles.form} onSubmit={handleNewCommentSubmit}>
                 <input
@@ -77,7 +104,9 @@ const Comentarios = ({ eventoId }) => {
                     onChange={(e) => setNewComment(e.target.value)}
                     placeholder="Adicionar um comentário..."
                 />
-                <button type="submit" className={styles.submitButton}>Publicar Comentário</button>
+                <button type="submit" className={styles.submitButton} disabled={loading}>
+                    {loading ? "Posting comment..." : "Publicar Comentário"}
+                </button>
             </form>
         </div>
     );

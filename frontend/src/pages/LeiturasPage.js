@@ -1,8 +1,9 @@
 import React from 'react';
 import Leituras from '../components/Leituras';
-import VideoThumbnails from '../components/VideoThumbnails';
+//import VideoThumbnails from '../components/VideoThumbnails';
 import Card from '../components/Card';
 import styles from '../styles/Audiovisual.module.css';
+
 
 const LeiturasPage = () => {
 
@@ -88,12 +89,15 @@ const LeiturasPage = () => {
   
   return (
     <div className={styles.container}>
+      <div className={styles.LeiturasList}>
       <Card className={styles.cardLeituras}>
         <Leituras books={exampleBooks} />
       </Card>
+      
 {/*       <Card className={styles.cardVideos}>
         <VideoThumbnails videos={exampleVideos} />
       </Card> */}
+      </div>
     </div>
   );
 };

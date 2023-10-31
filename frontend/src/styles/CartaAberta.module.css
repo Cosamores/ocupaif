@@ -1,24 +1,29 @@
 /* src/styles/CartaAberta.module.css */
 .cartaAberta {
-    background-color: rgba(253, 253, 253, 0.421);
+    background-color: rgba(35, 25, 11, 0.383);
     --webkit-backdrop-filter: blur(5px);
     --moz-backdrop-filter: blur(5px);
     border-radius: 10px;
     padding: 20px 20px 0px 20px;
-    color: #000000;
+    color: #a1a1a1;
     max-width: 90%;
     min-height: 50rem;
+    max-height: 100vh;
     text-align: justify;
+    display: flex;
+    flex-direction: column;
  
   }
   .cartaContainer {
     display: flex;
     justify-content: center;
+    overflow-y: auto;
+    box-shadow: 0px 0px 10px 3px #301f04d5;
   }
   .titulo {
     font-size: 28px;
     font-weight: 600;
-    color: var(--red-standard);
+    color: var(--orange-standard);
     text-align: center;
     margin-bottom: 1.8rem ;
     padding: 10px;
@@ -29,7 +34,7 @@
     margin-top: 15px;
     margin-bottom: 0;
     font-style: italic;
-    color: #191515;
+    color: #dddddd;
   }
   
   .conteudo {
@@ -40,23 +45,26 @@
 
   
   .convidamos {
-    color: #000000;  
+    color: #050505;  
     font-size: 18px;
-    background-color: #00be2345;  
+    background-color: #62c975c2;  
     border-radius: 15px;
-    padding: 12px;
+    padding: 18px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
     box-sizing:border-box;
   }
   
   @media (max-width:768px) {
     .cartaAberta {
         max-width: 100%;
-        margin: 0px auto;
-        padding-bottom: 50px;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 0;
     }
 
     .titulo {
-      padding-bottom: 20px;
+      padding-top: 200px;
       font-size: 26px;
       margin-bottom: 0;
 
@@ -72,5 +80,7 @@
       display: flex;
       justify-content: center;
       flex-direction: column;
+      box-sizing: border-box;
+      overflow-y: scroll;
     }
   }

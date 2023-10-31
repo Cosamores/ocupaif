@@ -37,29 +37,29 @@ const eventosPassados = useMemo(() =>
     return (
         <div className={styles.eventosLista}>
             <div className={styles.eventosFuturos}>
-    <h2 className={styles.titulo}>Eventos Futuros</h2>
-    {eventosFuturos.length > 0 ? (
-        eventosFuturos.map((evento, index) => (
-            <EventoCard key={index} {...evento} />
-        ))
-    ) : (
-        <p>No future events available.</p>
-    )}
-</div>
-<div className={styles.eventosPassados}>
-    <h2 className={styles.titulo}>Eventos Passados</h2>
-    <div className={styles.eventosContainer}>
-        {eventosPassados.length > 0 ? (
-            eventosPassados.map((evento, index) => (
-                <EventoCard key={index} {...evento} small />
-            ))
-        ) : (
-            <p>No past events available.</p>
-        )}
-    </div>
-</div>
-
+                <h2 className={styles.titulo}>Eventos Futuros</h2>
+                {eventosFuturos.length > 0 ? (
+                    eventosFuturos.map((evento, index) => (
+                        <EventoCard key={index} {...evento} />
+                    ))
+                ) : (
+                     <p>Em breve novos eventos</p>
+            )}
         </div>
+        <div className={styles.eventosPassados}>
+            <h2 className={styles.titulo}>Eventos Passados</h2>
+            <div className={styles.eventosContainer}>
+                {eventosPassados.length > 0 ? (
+                eventosPassados.map((evento, index) => (
+                    <EventoCard key={index} {...evento} small />
+                    ))
+                ) : (
+                    <p>Não foram encontrados eventos passados</p>
+                )}
+            </div>
+        </div>
+
+</div>
     );
 };
 

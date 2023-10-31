@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 
 function App({ Component, pageProps }) {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
       <Header />
       <Component {...pageProps} />
       <Footer />

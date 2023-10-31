@@ -9,10 +9,12 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.logoContainer}>
       <Link href="/">
-        <Image className={styles.logo} src="/images/ocupa_logo.png" alt="Logo Ocupa IFSP" width={200} height={200} />
+        <Image className={styles.logo} src="/images/ocupa_logo.png" alt="Logo Ocupa IFSP" width={90} height={90} />
         </Link>
-        <button className={styles.oQueButton}>
-          <h1 className={styles.title}><ul className={styles.menu}>
+        {/* <button className={styles.oQueButton}></button>
+
+         <h1 className={styles.title}></h1>*/}
+        <ul className={styles.menu}>
           <li>
             <Link href="/">
               <span className={styles.menuItem}>Inicio</span>
@@ -28,12 +30,9 @@ const Header = () => {
               <span className={styles.menuItem}>Leituras</span>
             </Link>
           </li>
-        </ul></h1>
-          </button>
+        </ul>
       </div>
-      <nav>
-         
-      </nav>
+
     </header>
   );
 };
