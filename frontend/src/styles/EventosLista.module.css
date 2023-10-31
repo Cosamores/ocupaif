@@ -42,6 +42,7 @@
   .titulo {
     font-size: 40px;
     color: var(--orange-standard);
+    margin-bottom: 20px;
   }
   
   @media (max-width: 768px) {
