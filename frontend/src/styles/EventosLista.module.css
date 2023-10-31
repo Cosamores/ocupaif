@@ -21,14 +21,14 @@
   .eventosPassados {
     margin-top: 20px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     width: 100%;
     color: black;    
   }
   .eventosContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
   }
   
