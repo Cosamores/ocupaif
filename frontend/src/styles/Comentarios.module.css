@@ -1,60 +1,85 @@
+/* styles/Comentarios.module.css */
+
 .comentarios {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
-  }
-
-
-  .titulo {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .commentBlock {
-    display: flex;
-    flex-direction: column;
-    background-color: #f8daaf55;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 10px;
-  }
-  
-  .commentName {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .mensagem {
-    margin-bottom: 5px;
-  }
-  
-  .nameInput {
-    margin-bottom: 10px;
-    padding: 10px;
-    width: 50%;
-    border-radius: 10px;
-  }
-  
-  .commentInput {
-    margin-bottom: 10px;
-    padding: 10px;
-    width: 50%;
-    border-radius: 10px;
-  }
-  
-  .submitButton {
-    padding: 10px;
-    border: 1px solid var(--orange-standard);
-    border-radius: 30px;
-    background: linear-gradient(100deg, rgba(61, 255, 43, 0.3) 0%, #fd0b0b 100%);
-    font-weight: 700;
-    margin: 20px;
+  display: flex;
+  flex-direction: column;
 }
-  
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.titulo {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.commentBlock {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8daaf55;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* styles/Comentarios.module.css */
+
+.commentName {
+  font-weight: bold;
+  color: #333;
+}
+
+.mensagem {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.date {
+  font-size: 12px;
+  color: #888;
+  margin-top: 10px;
+  align-self: flex-end;
+}
+
+.nameInput,
+.commentInput {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.nameInput {
+  max-width: 300px;
+}
+
+.commentInput {
+  max-width: 500px;
+  height: 100px;
+}
+
+.submitButton {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submitButton:hover {
+  background-color: #0056b3;
+}
+
+.submitButton:disabled {
+  background-color: #cccccc;
+  cursor: default;
+}

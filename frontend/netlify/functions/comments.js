@@ -1,78 +1,66 @@
-
-
-const { MongoClient } = require('mongodb');
-const uri = process.env.MONGODB_URI;
+import { connectToDatabase } from './client'; // Importa a função de conexão
+import { MongoClient } from 'mongodb';
 
 exports.handler = async (event, context) => {
-  const client = new MongoClient(uri, { useNewUrlParser: true });
-  
-  console.log('HTTP Method:', event.httpMethod); // Log the incoming HTTP method
-
   if (event.httpMethod === 'GET') {
     const eventoID = event.queryStringParameters.eventoId;
-
+    const db = await connectToDatabase(); // Conecta ao banco de dados
+    const collection = db.collection("comments");
+    const events = await collection.find({}).toArray();
+    
     try {
-      await client.connect();
-      const collection = client.db("ocupaif").collection("comments");
       const comments = await collection.find({ evento: eventoID }).sort({ data: -1 }).toArray();
 
       return {
         statusCode: 200,
         headers: {
-          "Access-Control-Allow-Origin": "*", // Allow any origin
+          "Access-Control-Allow-Origin": "*", // Permita qualquer origem
           "Access-Control-Allow-Methods": "GET, POST",
-          "Access-Control-Allow-Headers": "Content-Type"
+          "Access-Control-Allow-Headers": "Content-Type",
         },
-        body: JSON.stringify(comments)
+        body: JSON.stringify(comments),
       };
     } catch (error) {
       return {
         statusCode: 500,
         headers: {
-          "Access-Control-Allow-Origin": "*", // Allow any origin
+          "Access-Control-Allow-Origin": "*", // Permita qualquer origem
         },
-        body: JSON.stringify({ error: 'Failed fetching comments' })
+        body: JSON.stringify({ error: 'Falha ao buscar comentários' }),
       };
-    } finally {
-      await client.close();
     }
   }
 
   if (event.httpMethod === 'POST') {
     const commentData = JSON.parse(event.body);
 
-    // Ensure eventoId is present in the commentData
     if (!commentData.eventoId) {
-        return {
-            statusCode: 400,
-            body: JSON.stringify({ error: 'eventoId is missing' })
-        };
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ error: 'eventoId está ausente' }),
+      };
     }
+
+    const db = (await connectToDatabase()).db("ocupaif");
+    const collection = db.collection("comments");
 
     try {
-        await client.connect();
-        const collection = client.db("ocupaif").collection("comments");
-        const result = await collection.insertOne(commentData);
-        return {
-            statusCode: 200,
-            body: JSON.stringify(result.ops[0])
-        };
+      const result = await collection.insertOne(commentData);
+      return {
+        statusCode: 200,
+        body: JSON.stringify(result.ops[0]),
+      };
     } catch (error) {
-        console.error('Error:', error);
-        return {
-            statusCode: 500,
-            body: JSON.stringify({ error: 'Failed posting comment' })
-        };
-    } finally {
-        await client.close();
+      console.error('Erro:', error);
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: 'Falha ao postar comentário' }),
+      };
     }
-}
+  }
 
-return {
+  return {
     statusCode: 405,
-    body: JSON.stringify({ error: 'Method not allowed' })
+    body: JSON.stringify({ error: 'Método não permitido' }),
+  };
 };
-};
-
-
-
