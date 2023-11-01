@@ -1,12 +1,13 @@
-// netlify/functions/get-all-events.js
-
-import { connectToDatabase } from './client'; // Importa a função de conexão
+// get-all-events
 import { MongoClient } from 'mongodb';
+import { connectToDatabase } from './client';
 
-export const handler = async (event, context) => {
+exports.handler = async (event, context) => {
+  const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+
   try {
-    const db = await connectToDatabase(); // Conecta ao banco de dados
-    const collection = db.collection("events");
+    await client.connect();
+    const collection = connectToDatabase().ent.db("ocupaif").collection("events");
     const events = await collection.find({}).toArray();
 
     return {
@@ -16,7 +17,9 @@ export const handler = async (event, context) => {
   } catch (error) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: 'Falha ao buscar eventos' })
+      body: JSON.stringify({ error: 'Failed fetching events' })
     };
+  } finally {
+    await client.close();
   }
 };

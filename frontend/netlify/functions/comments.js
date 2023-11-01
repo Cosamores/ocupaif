@@ -4,13 +4,12 @@ import { MongoClient } from 'mongodb';
 exports.handler = async (event, context) => {
   if (event.httpMethod === 'GET') {
     const eventoID = event.queryStringParameters.eventoId;
-    const db = await connectToDatabase(); // Conecta ao banco de dados
+    const db = await connectToDatabase();
     const collection = db.collection("comments");
-    const events = await collection.find({}).toArray();
-    
-    try {
-      const comments = await collection.find({ evento: eventoID }).sort({ data: -1 }).toArray();
 
+    try {
+      const comments = await collection.find({ eventoId: eventoID }).sort({ data: -1 }).toArray();
+   
       return {
         statusCode: 200,
         headers: {
@@ -21,10 +20,11 @@ exports.handler = async (event, context) => {
         body: JSON.stringify(comments),
       };
     } catch (error) {
+      console.error('Erro ao buscar comentários:', error);  // Adicionado log de erro
       return {
         statusCode: 500,
         headers: {
-          "Access-Control-Allow-Origin": "*", // Permita qualquer origem
+          "Access-Control-Allow-Origin": "*",
         },
         body: JSON.stringify({ error: 'Falha ao buscar comentários' }),
       };
