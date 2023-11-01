@@ -48,6 +48,7 @@ const EventoCard = ({ imagem, nome, descricao, data, local, eventoId, small }) =
             descricao={descricao}
             data={data}
             local={local}
+            eventoId={eventoId}
           />
         </Modal>
       )}
