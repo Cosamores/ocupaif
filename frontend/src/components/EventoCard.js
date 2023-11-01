@@ -5,12 +5,14 @@ import Modal from './Modal';
 import DetalhesEvento from './DetalhesEvento';
 import Image from 'next/image';
 
-const EventoCard = ({ imagem, nome, descricao, data, local, small }) => {
+const EventoCard = ({ imagem, nome, descricao, data, local, eventoId, small }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpenModal = () => {
+    console.log('Evento ID:', eventoId);
     setIsOpen(true);
   };
+  
 
   const handleCloseModal = () => {
     setIsOpen(false);

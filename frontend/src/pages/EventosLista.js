@@ -40,7 +40,7 @@ const eventosPassados = useMemo(() =>
                 <h2 className={styles.titulo}>Eventos Futuros</h2>
                 {eventosFuturos.length > 0 ? (
                     eventosFuturos.map((evento, index) => (
-                        <EventoCard key={index} {...evento} />
+                        <EventoCard key={index} {...evento} eventoId={eventoId} />
                     ))
                 ) : (
                      <p>Em breve novos eventos</p>
@@ -51,7 +51,7 @@ const eventosPassados = useMemo(() =>
             <div className={styles.eventosContainer}>
                 {eventosPassados.length > 0 ? (
                 eventosPassados.map((evento, index) => (
-                    <EventoCard key={index} {...evento} small />
+                    <EventoCard key={index} {...evento} eventoId={eventoId} small />
                     ))
                 ) : (
                     <p>Não foram encontrados eventos passados</p>

@@ -41,7 +41,7 @@ const Evento = () => {
         <p>{error}</p>
       ) : upcomingEvent ? (
         <div className={styles.agenda}>
-          <EventoCard {...upcomingEvent} />
+          <EventoCard {...upcomingEvent} eventoId={eventoId} />
         </div>
       ) : (
         <p>Em breve novos eventos</p>
