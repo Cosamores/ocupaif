@@ -51,7 +51,7 @@ const eventosPassados = useMemo(() =>
             <div className={styles.eventosContainer}>
                 {eventosPassados.length > 0 ? (
                 eventosPassados.map((evento, index) => (
-                    <EventoCard key={index} {...evento} eventoId={eventoId} small />
+                    <EventoCard key={index} {...evento} eventoId={evento._id} small />
                     ))
                 ) : (
                     <p>Não foram encontrados eventos passados</p>
