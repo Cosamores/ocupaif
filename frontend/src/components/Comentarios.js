@@ -16,6 +16,7 @@ const Comentarios = ({ eventoId }) => {
     async function fetchComments() {
       setLoading(true);
       setError(null);
+      console.log(`EventoId no Comentário: ${eventoId}`);
 
       try {
         const response = await fetch(`/.netlify/functions/comments?eventoId=${eventoId}`);

@@ -3,7 +3,8 @@ import styles from "../styles/DetalhesEvento.module.css";
 import Comentarios from "./Comentarios";
 import Image from "next/image";
 
-const DetalhesEvento = ({ imagem, nome, descricao, data, local, _id }) => {
+const DetalhesEvento = ({ imagem, nome, descricao, data, local, eventoId }) => {
+  console.log(`EventoId no DetalhesEvento: ${eventoId}`)
   return (
     <div className={styles.detalhesEvento}>
       <Image
@@ -17,7 +18,7 @@ const DetalhesEvento = ({ imagem, nome, descricao, data, local, _id }) => {
       <p className={styles.descricao}>{descricao}</p>
       <p className={styles.data}>{data}</p>
       <p className={styles.local}>{local}</p>
-      <Comentarios eventoId={_id} />
+      <Comentarios eventoId={eventoId} />
     </div>
   );
 };
