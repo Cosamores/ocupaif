@@ -3,6 +3,7 @@
         background: var(--background-light);
         border-radius: 10px;
         padding: 10px;
+        max-width: 100%;
     }
     .nome {
       margin-top: 1rem;
@@ -13,6 +14,14 @@
       padding: 0 10px;
     }
     
+    .imageWrapper {
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
     .descricao {
       margin-top: 0.8rem;
       font-weight: 600;
@@ -37,3 +46,10 @@
       padding:0 10px 20px 10px;
     }
     
+    @media (max-width: 768px) {
+    
+      .imagem {
+        max-width: 100%;
+      }
+    
+    }
