@@ -1,3 +1,5 @@
+// netlify/functions/comments.js
+
 import { connectToDatabase } from './client';
 
 exports.handler = async (event, context) => {

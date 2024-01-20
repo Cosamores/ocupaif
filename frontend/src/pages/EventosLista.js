@@ -11,7 +11,7 @@ const EventosLista = () => {
             try {
                 const response = await fetch('/.netlify/functions/get-all-events');
                 const data = await response.json();
-                if (Array.isArray(data)) {  // <-- Check if data is an array
+                if (Array.isArray(data)) {  // 
                     setEventos(data);
                 } else {
                     console.error("API did not return an array:", data);

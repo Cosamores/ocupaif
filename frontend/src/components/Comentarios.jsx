@@ -20,6 +20,11 @@ const Comentarios = ({ eventoId }) => {
 
       try {
         const response = await fetch(`/.netlify/functions/comments?eventoId=${eventoId}`);
+        if (!response.ok) {
+          console.error("Erro ao buscar comentários:", response.status);
+          setError("Falha ao buscar comentários");
+          return;
+        }
         const data = await response.json();
         setComments(Array.isArray(data) ? data : []);
       } catch (error) {
