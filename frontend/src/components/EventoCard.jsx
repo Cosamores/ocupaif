@@ -36,7 +36,7 @@ const EventoCard = ({ imagem, nome, descricao, data, local, eventoId, small }) =
             <h3 className={styles.eventoNome}>{nome}</h3>
             <p className={styles.eventoDescricao}>{descricao}</p>
             <p className={styles.eventoData}>{data}</p>
-            <p className={styles.eventoLocal}>{local}</p>
+            <p className={styles.eventoLocal}>Local: {local}</p>
           </>
         )}
       </div>
