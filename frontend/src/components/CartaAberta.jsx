@@ -2,7 +2,7 @@
 import React from 'react';
 import styles from '../styles/CartaAberta.module.css';
 
-const CartaAberta = ({ titulo, subtitulo, conteudo, convidamos }) => {
+const CartaAberta = ({ titulo, subtitulo, conteudo }) => {
     const conteudoFormatado = conteudo.replace(
         /TODOS./g,
         'TODOS.<br/>'

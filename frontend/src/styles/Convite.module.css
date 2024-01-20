@@ -14,44 +14,18 @@
   overflow-y: auto;
 }
 
-
-.scrollbar
-{
-	margin-left: 30px;
-	float: left;
-	height: 300px;
-	width: 65px;
-	background: #F5F5F5;
-	overflow-y: scroll;
-	margin-bottom: 25px;
+.convidamos::-webkit-scrollbar {
+  width: 10px; /* Largura da barra de rolagem */
+  background: #fdfff8;
 }
 
-.force-overflow
-{
-	min-height: 450px;
+.convidamos::-webkit-scrollbar-thumb {
+  background: var(--verde-scroll); /* Cor do handle da barra de rolagem */
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 10%; /* Arredonda os cantos do handle */
 }
 
-#style-15::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
-	background-color: #F5F5F5;
-	border-radius: 10px;
-}
-
-#style-15::-webkit-scrollbar
-{
-	width: 10px;
-	background-color: #F5F5F5;
-}
-
-#style-15::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	background-color: #FFF;
-	background-image: -webkit-gradient(linear,
-									   40% 0%,
-									   75% 84%,
-									   from(#4D9C41),
-									   to(#19911D),
-									   color-stop(.6,#54DE5D))
+.convidamos::-webkit-scrollbar-thumb:hover {
+  background: var(--verde-escuro-padrao); /* Cor quando o mouse está sobre o handle */
 }

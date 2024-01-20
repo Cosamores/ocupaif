@@ -1,12 +1,12 @@
 
     .detalhesEvento {
-        background: linear-gradient(180deg, rgba(227,227,227,0.3) 80%, var(--background-light) 100%);
+        background: var(--background-light);
         border-radius: 10px;
         padding: 10px;
     }
     .nome {
       margin-top: 1rem;
-      color: var(--orange-standard);
+      color: var(--red-standard);
       font-size: 1.5em;
       font-weight: 600;
       width: inherit;
@@ -27,7 +27,7 @@
     .data {
       
       font-weight: bold;
-      color: var(--if-color);
+      color: var(--verde-escuro-padrao);
       font-size: 22px;
       padding: 10px;
     }

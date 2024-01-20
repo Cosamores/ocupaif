@@ -16,7 +16,7 @@
 }
 
 .eventoCard {
-  background: rgba(255, 255, 255, 0.744);
+  background: rgb(255, 254, 254);
   border-radius: 15px;
   padding: 1rem;
   --webkit-backdrop-filter: blur(10px);
@@ -59,7 +59,7 @@ padding: 0 10px 10px 10px;}
 
 .eventoNome {
   margin-top: 1rem;
-  color: var(--orange-standard);
+  color: var(--red-standard);
   font-size: 1.5em;
   font-weight: 600;
   width: inherit;
@@ -78,7 +78,7 @@ padding: 0 10px 10px 10px;}
 .eventoData {
   
   font-weight: bold;
-  color: #ffa322;
+  color: var(--verde-escuro-padrao);
   font-size: 22px;
   padding: 0 10px;
 }

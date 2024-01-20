@@ -21,11 +21,11 @@ const Home = () => {
 
     <main className={styles.main}>
       <div className={styles.homeContainer}>
-        <Card className={styles.card} id="convite">
+        <Card className={styles.card}>
           <Convite className={styles.convidamos} conteudo={convidamos} />
         </Card>
         <Card className={styles.card} id="carta">
-        <CartaAberta titulo={titulo} subtitulo={subtitulo} conteudo={conteudo} convidamos={convidamos}/>
+        <CartaAberta titulo={titulo} subtitulo={subtitulo} conteudo={conteudo}/>
         </Card>
         <Card className={styles.card} id="evento">
           <Evento />

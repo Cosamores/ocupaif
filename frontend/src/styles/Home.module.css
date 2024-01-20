@@ -13,10 +13,12 @@
   }
 
   @media (max-width: 768px) {
-    .main {
-      flex-direction:column-reverse;
-      align-items: center;
-      height: auto;
+
+    .homeContainer {
+      flex-direction: column-reverse;
     }
-  }
-  
+
+    .card {
+      overflow-y:scroll;
+    }
+}

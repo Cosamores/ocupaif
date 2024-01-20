@@ -15,7 +15,6 @@
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    border: 3px solid --verde-escuro-padrao;
     padding: 20px;
   }
   .titulo {
@@ -42,6 +41,21 @@
 
   
  
+.cartaContainer::-webkit-scrollbar {
+  width: 10px; /* Largura da barra de rolagem */
+  background: #fdfff8;
+}
+
+.cartaContainer::-webkit-scrollbar-thumb {
+  background: var(--verde-scroll); /* Cor do handle da barra de rolagem */
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 10%; /* Arredonda os cantos do handle */
+}
+
+.cartaContainer::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Cor quando o mouse está sobre o handle */
+}
   
   @media (max-width:768px) {
     .cartaAberta {
@@ -49,15 +63,20 @@
         margin: 0;
         padding: 0;
         padding-bottom: 0;
+        height: 90%;
     }
 
     .titulo {
-      padding-top: 200px;
       font-size: 26px;
-      margin-bottom: 0;
+      margin: 0;
+      padding: 0;
+      height: 50px;
 
     }
 
+    .subtitulo {
+      font-size: 16px;
+    }
     .conteudo {
       font-size: 16px;
       padding: 0 auto;
@@ -65,10 +84,14 @@
     }
 
     .cartaContainer {
+      position: relative;
       display: flex;
       justify-content: center;
       flex-direction: column;
       box-sizing: border-box;
       overflow-y: scroll;
+      width: 100%;
+      padding: 0;
+      margin: 0;
     }
   }

@@ -1,7 +1,7 @@
 /* EventosLista.module.css */
 
 .eventosLista {
-    gap: 2rem; /* You can adjust this to control the spacing between the two sections */
+    gap: 2rem;
     align-items: center;
     padding: 2rem;
     width: 100%;
@@ -53,6 +53,11 @@
     .eventosPassados {
       margin-bottom: 2rem;
       flex: 1;
+    }
+
+    .titulo {
+      font-size: 28px;
+
     }
   }
   
