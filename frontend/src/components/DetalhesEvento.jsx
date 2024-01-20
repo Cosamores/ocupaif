@@ -16,8 +16,8 @@ const DetalhesEvento = ({ imagem, nome, descricao, data, local, eventoId }) => {
       />
       <h2 className={styles.nome}>{nome}</h2>
       <p className={styles.descricao}>{descricao}</p>
-      <p className={styles.data}>{data}</p>
-      <p className={styles.local}>{local}</p>
+      <p className={styles.data}>{data} </p>
+      <p className={styles.local}>Local: {local}</p>
       <Comentarios eventoId={eventoId} />
     </div>
   );

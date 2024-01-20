@@ -36,19 +36,19 @@
     height: inherit;
     object-fit: cover;
     border-radius: 10px;
-    border: 1px solid #e69e1a8c;
-    box-shadow:  0px 0px 10px 3px #301f04d5;
+    border: 1px solid var(--verde-escuro-padrao);
+    box-shadow:  0px 0px 10px 3px var(--verde-escuro-padrao);
     padding: 5px;
   
   }
   
   .imagemSmall{
     border-radius: 10px;
-    border: 7px ridge #e69e1a8c;
+    border: 7px ridge var(--verde-escuro-padrao);
   }
   .imagemSmall:hover{
     border-radius: 15px;
-    border: 7px groove #e69e1a8c;
+    border: 7px groove var(--verde-escuro-padrao);
   }
 
 .eventoDataHora {
@@ -59,7 +59,7 @@
 
   .eventoNome {
     margin-top: 1rem;
-    color: var(--orange-standard);
+    color: var(--red-standard);
     font-size: 1.5em;
     font-weight: 600;
     width: inherit;
@@ -78,7 +78,7 @@
   .eventoData {
     
     font-weight: bold;
-    color: #ffa322;
+    color: var(--verde-escuro-padrao);
     font-size: 22px;
     padding: 0 10px;
   }
