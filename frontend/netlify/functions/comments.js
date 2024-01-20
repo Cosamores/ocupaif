@@ -8,10 +8,10 @@ exports.handler = async (event, context) => {
   };
 
   const db = await connectToDatabase();
+  const collection = db.collection("comments");
 
   if (event.httpMethod === "GET") {
     const eventoID = event.queryStringParameters.eventoId;
-    const collection = db.collection("comments");
 
     try {
       const comments = await collection
@@ -36,7 +36,7 @@ exports.handler = async (event, context) => {
 
   if (event.httpMethod === "POST") {
     const commentData = JSON.parse(event.body);
-
+    console.log('Comment data: ' + commentData)
     if (!commentData.eventoId) {
       return {
         statusCode: 400,
@@ -45,7 +45,6 @@ exports.handler = async (event, context) => {
       };
     }
 
-    const collection = db.collection("comments");
 
     try {
       const result = await collection.insertOne(commentData);
