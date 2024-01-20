@@ -1,5 +1,0 @@
-ATLAS_URI=mongodb+srv://cosamores:caracarambacara@ocupaif.hsug031.mongodb.net/?retryWrites=true&w=majority
-ADMIN_USER=estudante
-ADMIN_PASS=estudantesemluta2023
-JWT_SECRET=estudantesemluta2023
-BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:5000';

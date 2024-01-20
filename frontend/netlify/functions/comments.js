@@ -3,6 +3,7 @@
 import { connectToDatabase } from './client';
 
 exports.handler = async (event, context) => {
+  console.log('Evento: ' + event)
   const headers = {
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Methods": "GET, POST",
@@ -10,10 +11,10 @@ exports.handler = async (event, context) => {
   };
 
   const db = await connectToDatabase();
-  const collection = db.collection("comments");
 
   if (event.httpMethod === "GET") {
     const eventoID = event.queryStringParameters.eventoId;
+    const collection = db.collection("comments");
 
     try {
       const comments = await collection
@@ -38,7 +39,9 @@ exports.handler = async (event, context) => {
 
   if (event.httpMethod === "POST") {
     const commentData = JSON.parse(event.body);
-    console.log('Comment data: ' + commentData)
+    console.log('Comment data: ' + commentData);
+    const collection = db.collection("comments");
+
     if (!commentData.eventoId) {
       return {
         statusCode: 400,
