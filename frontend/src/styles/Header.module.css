@@ -14,7 +14,6 @@
     z-index: 99;
     box-sizing: border-box;
     box-shadow: 0px 0px 6px 2px #4e2315c3;
-    
   }
   
   .logoContainer {
@@ -26,14 +25,14 @@
     height: 70px;
     width: auto;
     margin-right: 2rem;
-    border: 5px ridge rgba(34, 209, 83, 0.667);
+    border: 5px ridge var(--verde-escuro-padrao);
     transition: border 0.3s;
 
   }
   
   .title {
     font-size: 24px;
-    color: var(--orange-standard);
+    color: var(--red-standard);
     margin: 0;
     font-weight: 700;
     padding: 0;
@@ -50,7 +49,7 @@
   }
   
   .menuItem {
-    text-decoration: none !important;
+    text-decoration: none;
     color: #f5f5f5;
     padding: 0 20px;
     font-size: 26px;
@@ -67,9 +66,12 @@
     color: none;
     appearance: none;
   }
-
+  .menuItem:link {
+    color: none;
+    appearance: none;
+  }
   .logo:hover {
-    border: 5px groove rgb(255, 27, 27);
+    border: 5px groove var(--red-standard);
   }
 
   @media (max-width: 768px) {

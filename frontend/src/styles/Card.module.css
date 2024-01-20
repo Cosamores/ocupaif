@@ -1,8 +1,8 @@
 /* src/styles/Card.module.css */
 .card {
-  background-color: rgb(29, 22, 7);
+  background-color: var(--background-light);
   border-radius: 10px;
-  color: #000000;
+  color: #000100;
   max-width: 82rem;
   margin: 10px;
   padding: 10px;

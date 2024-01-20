@@ -7,7 +7,7 @@
   }
   
   .h2 {
-    color: #000000;
+    color: var(--red-standard);
     margin-bottom: 30px;
     font-size: 28px;
     font-weight: 700;
@@ -28,6 +28,6 @@
   }
   
   .linkList a:hover {
-    color: #00ccff;
+    color: var(--verde-escuro-padrao);
   }
   
